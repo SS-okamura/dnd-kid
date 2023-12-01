@@ -66,6 +66,14 @@ export default function App() {
 
   const handleDragOver = (event: DragOverEvent) => {
     const { active, over, delta } = event;
+    console.log("handleDragOver");
+    /**
+     * 現在ドラック中のエレメントの情報
+     *
+     */
+    console.log("active", active);
+    console.log("over", over);
+    console.log("delta", delta);
     const activeId = String(active.id);
     const overId = over ? String(over.id) : null;
     const activeColumn = findColumn(activeId);
